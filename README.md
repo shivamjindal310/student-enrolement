@@ -1,8 +1,13 @@
 A spring boot project
- API to add a new student (hint: student table)
+- API to add a new student (hint: student table)
+  - sample:  curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"Saif Ali Khan\"}" localhost:8080/api/students 
 - API to update a student
+  - sample: curl -X PUT -H "Content-Type: application/json" -d "{\"id\":\"5\",\"name\":\"Saif Ali\"}" localhost:8080/api/students
 - API to add a new subject (hint: subject table)
+  - sample: curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"History\"}" localhost:8080/api/subject
 - API to delete a subject (check: do not allow deletion if subject is assigned to a student)
+  -  sample: curl -X DELETE http://localhost:8080/api/subject/4
 - API to assign a subject to student (hint: student-subject xref table)
-
+  - sample: curl -X POST -H "Content-Type: application/json" -d "{\"studentId\":\"1\", \"subjectId\":\"4\"}" localhost:8080/api/enrolement
 - API to fetch list of student details along with subjects
+  -  curl -X GET http://localhost:8080/api/students/all/1
